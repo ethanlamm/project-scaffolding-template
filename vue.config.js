@@ -17,6 +17,16 @@ module.exports = defineConfig({
   devServer: {
     // 这是任何404或无响应页，重跳转至 index.html
     historyApiFallback: true,
+    proxy: {
+      '/dev-api': {
+        target: 'http://pcapi-xiaotuxian-front-devtest.itheima.net/',
+        pathRewrite: { "^/dev-api": "" }
+      },
+      '/prod-api': {
+        target: 'https://example.com',
+        pathRewrite: { "^/prod-api": "" }
+      }
+    }
   },
 
   // less自动导入：http://zhoushugang.gitee.io/erabbit-client-pc-document/guide/03-home.html#_02-%E9%A6%96%E9%A1%B5-less%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AF%BC%E5%85%A5
