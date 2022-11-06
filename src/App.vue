@@ -3,9 +3,12 @@
 </script>
 
 <template>
-  <div>App Page</div>
+  <div class="App">App Page</div>
 </template>
 
-<style scoped>
-
+<style scoped lang="less">
+.App {
+  background-color: @xtxColor;
+  .hoverShadow();
+}
 </style>

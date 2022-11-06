@@ -31,5 +31,17 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+
+  // 配置 mixin.less、variables.less 自动导入
+  css: {
+    preprocessorOptions: {
+      less: {
+        additionalData: `
+          @import "./src/assets/styles/mixin.less";
+          @import "./src/assets/styles/variables.less";
+        `
+      }
+    }
   }
 })
