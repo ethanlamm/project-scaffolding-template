@@ -1,12 +1,5 @@
 <template>
   <div id="app">
-    App page
+    <router-view></router-view>
   </div>
 </template>
-
-<style lang="less">
-#app {
-  background-color: @xtxColor;
-  .hoverShadow ()
-}
-</style>
