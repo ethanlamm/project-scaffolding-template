@@ -5,5 +5,8 @@
 </template>
 
 <style lang="less">
-
+#app {
+  background-color: @xtxColor;
+  .hoverShadow ()
+}
 </style>
