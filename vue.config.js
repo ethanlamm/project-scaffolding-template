@@ -15,13 +15,6 @@ module.exports = defineConfig({
   productionSourceMap: false,
 
   devServer: {
-    // 配置代理跨域
-    proxy: {
-      '/dev-api': {
-        target: 'http://pcapi-xiaotuxian-front-devtest.itheima.net/',
-        pathRewrite: { '^/dev-api': '' }
-      }
-    },
     // 这是任何404或无响应页，重跳转至 index.html
     historyApiFallback: true,
   },
