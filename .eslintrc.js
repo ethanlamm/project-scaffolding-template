@@ -13,6 +13,7 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-multiple-empty-lines': [0, { max: 100 }]
+    'no-multiple-empty-lines': [0, { max: 100 }],
+    'eol-last': 0
   }
 }
