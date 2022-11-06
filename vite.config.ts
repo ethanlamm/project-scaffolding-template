@@ -1,5 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
-
+// 自动引入api的包
+import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 // 1. Jsx 插件，初始化项目的时候选择Jsx就会自动下载
 import vue from '@vitejs/plugin-vue'
@@ -17,7 +18,13 @@ export default defineConfig({
       }
     ),
     // 2. 应用 vueJsx 插件
-    vueJsx()
+    vueJsx(),
+    // 使用自动引入api插件
+    // https://www.npmjs.com/package/unplugin-auto-import
+    AutoImport({
+      imports: ['vue', 'vue-router'],   // vue，vue-router的api不用再显示引入
+      dts: 'src/types/auto-imports.d.ts'  // 声明文件路径
+    }),
   ],
 
   // 配置开发服务器
