@@ -1,5 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 const path = require('path')
+const AutoImport = require('unplugin-auto-import/webpack')
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -36,5 +37,13 @@ module.exports = defineConfig({
         path.join(__dirname, './src/assets/styles/mixins.less')
       ]
     }
+  },
+
+  configureWebpack: {
+    plugins: [
+      AutoImport({
+        imports: ['vue', 'vue-router']
+      })
+    ]
   }
 })
