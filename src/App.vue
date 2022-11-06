@@ -1,7 +1,10 @@
 <template>
-  <div>App page</div>
+  <div class="app">App page</div>
 </template>
 
 <style lang="less">
-
+.app {
+  background-color: @xtxColor;
+  .hoverShadow ()
+}
 </style>
