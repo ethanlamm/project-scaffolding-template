@@ -1,9 +1,10 @@
 /* eslint-disable */
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import Layout from "@/views/Layout.vue";
 
 const router = createRouter({
-    history: createWebHistory(process.env.VUE_APP_BASE_API),
+    // 开发时使用hash模式，解决刷新404问题
+    history: createWebHashHistory(process.env.BASE_URL),
     routes: [
         {
             path: "/",
