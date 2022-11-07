@@ -13,7 +13,19 @@ export default defineConfig({
   // 服务器配置
   server: {
     // 原端口号 5173
-    port: 8080
+    port: 8080,
+    proxy: {
+      '/dev-api': {
+        target: 'http://pcapi-xiaotuxian-front-devtest.itheima.net/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/dev-api/, '')
+      },
+      '/prod-api': {
+        target: 'https://example.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/prod-api/, '')
+      }
+    }
   },
 
   // src别名配置

@@ -1,9 +1,14 @@
 import axios from "axios";
 
-export const baseURL = 'http://pcapi-xiaotuxian-front-devtest.itheima.net/'
+// 在vite.config.js中启用代理，依据环境的不同使用不同的 BASE_API
+// export const baseURL = 'http://pcapi-xiaotuxian-front-devtest.itheima.net/'
+
+// 环境变量的获取
+// vite：import.meta.env
+// webpackage：process.env
 
 const instance = axios.create({
-    baseURL,
+    baseURL: import.meta.env.VITE_APP_BASE_API,
     timeout: 5000
 })
 
