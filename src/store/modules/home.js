@@ -1,4 +1,4 @@
-import { makeAutoObservable } from "mobx"
+import { makeAutoObservable, runInAction } from "mobx"
 
 import http from "@/utils/request"
 
@@ -14,7 +14,9 @@ class HomeStore {
     getAllCategory = async () => {
         const res = await http('/home/category/head')
         // 使用this获取整个store实例
-        this.categoryList = res.result
+        runInAction(() => {
+            this.categoryList = res.result
+        })
     }
 }
 export default HomeStore
