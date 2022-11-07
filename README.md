@@ -1,4 +1,4 @@
-# manually-vue3-js
+# vue3-js-pinia(vue-cli)
 
 ## Project setup
 ```
