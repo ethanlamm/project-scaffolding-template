@@ -1,4 +1,4 @@
-# vue3
+# vue3-ts-pinia(create-vue)
 
 This template should help get you started developing with Vue 3 in Vite.
 
