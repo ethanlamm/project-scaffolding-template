@@ -1,4 +1,4 @@
-# manual
+# vu2-js-vuex(vue-cli)
 
 ## Project setup
 ```
