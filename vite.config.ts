@@ -22,5 +22,18 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src')
     }
+  },
+
+  // mixins.less、variables.less自动导入
+  css: {
+    preprocessorOptions: {
+      less: {
+        additionalData: `
+          @import "@/assets/styles/mixins.less";
+          @import "@/assets/styles/variables.less";
+        `
+      }
+    }
   }
+
 })
