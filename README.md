@@ -6,7 +6,7 @@
 | ----- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | vue2  | [vue2-js](https://github.com/ethanlamm/project-scaffolding-template/tree/vue2-js) | todo...                                                      |
 | vue3  | [vue3-js](https://github.com/ethanlamm/project-scaffolding-template/tree/vue3-js) | [vue3-ts](https://github.com/ethanlamm/project-scaffolding-template/tree/vue3-ts) |
-| react | [react-js](https://github.com/ethanlamm/project-scaffolding-template/tree/react-js-vite) | todo...                                                      |
+| react | [react-js](https://github.com/ethanlamm/project-scaffolding-template/tree/react-js-vite) | [react-ts](https://github.com/ethanlamm/project-scaffolding-template/tree/react-ts-vite) |
 
 
 
@@ -44,7 +44,7 @@ vue create project-name
 
 二、Manually
 
-:one: vue2-js
+:one: vue2-js ✅
 
 - 选择`Babel(默认选中)`、`Router`、`Vuex`、`CSS Pre-processors`、`Linter/Formatter(默认选中)`
 - 选择**vue2**
@@ -52,7 +52,7 @@ vue create project-name
 - pick a `CSS Pre-processors` -- `Sass/SCSS`  or  `Less`  or `Stylus`
 - 最终：vue2-js-router-vuex-(style)
 
-:two: vue3-js
+:two: vue3-js ✅
 
 - 选择`Babel(默认选中)`、`Router`、`Vuex`、`CSS Pre-processors`、`Linter/Formatter(默认选中)`
 - 选择**vue3**
@@ -85,7 +85,7 @@ npm create vue@3
 
 不推荐使用`create-vue`创建`vue2`项目
 
-🏆 vue3-ts
+✅ vue3-ts
 
 - project-name
 - Add TypeScript -- yes
@@ -132,7 +132,7 @@ npm create vite@latest
 |     [lit](https://vite.new/lit)     |     [lit-ts](https://vite.new/lit-ts)     |
 |  [svelte](https://vite.new/svelte)  |  [svelte-ts](https://vite.new/svelte-ts)  |
 
-推荐用来构建 🏆 react-ts
+推荐用来构建  react-ts
 
 - project-name
 - Select a framework -- React
@@ -144,7 +144,7 @@ npm create vite@latest
 
 ⚠ **注意**
 
-对比`create-react-app`和`vite`，二者构建的react项目均只有react、react-dom，需要手动添加router和store。而`create-react-app`的配置需要借助插件[@craco/craco](https://www.npmjs.com/package/@craco/craco)，所以`vite`构建react项目较简单，模板中的react项目均使用`vite`构建
+对比`create-react-app`和`vite`，二者构建的react项目均只有react、react-dom，需要手动添加router和store。而`create-react-app`的配置需要借助插件[@craco/craco](https://www.npmjs.com/package/@craco/craco)，所以`vite`构建react项目较简单，模板中的react项目均使用`vite`构建（✅[react-js-vite](https://github.com/ethanlamm/project-scaffolding-template/tree/react-js-vite)、✅[react-ts-vite](https://github.com/ethanlamm/project-scaffolding-template/tree/react-ts-vite)）
 
 
 
@@ -154,5 +154,5 @@ npm create vite@latest
 | ----- | ---------------- | ------------------- |
 | vue2  | vue-cli（vuex）  | todo...             |
 | vue3  | vue-cli（pinia） | create-vue（pinia） |
-| react | vite（mobx）     | todo...             |
+| react | vite（mobx）     | vite（mobx）        |
 
